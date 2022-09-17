@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+* {
+  font-family: 'IBM Plex Mono', monospace;
+  vertical-align: middle;
+}
+
+.logo {
+  margin: auto;
+  margin-top: 44px;
+  margin-bottom: 86px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -0.08em;
+  text-align: center;
+  color: #4520AB;
+}
+
+.input {
+  width: 496px;
+  height: 52px;
+  margin: auto;
+  border: 2px solid #111111;
+  border-radius: 14px;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#input-text {
+  margin: 0 15px;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.05em;
+  text-align: left;
+  color: #111111;
+  opacity: 0.4;  
+  flex-grow: 1;
+}
+
+#add-button {
+  width: 107px;
+  height: 38px;
+  margin-right: 7px;
+  border: none;
+  border-radius: 8px;
+  background: #111111; 
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: #FFFFFF;  
+}
+
+#add-button:hover {
+  transform: scale(1.02, 1.02);
+}
+
+#add-button:active {
+  transform: scale(0.95, 0.95);
+}
+
+#cleaner {
+  width: 176px;
+  height: 38px;  
+  margin: auto;
+  padding: 0 10px;
+  border: none;
+  border-radius: 8px;
+  background: #ADADAD;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #0F0F0F;
+}
+
+.cleaner img {
+  width: 24px;
+  height: 24px;
+}
+
+#cleaner:hover {
+  transform: scale(1.02, 1.02);
+}
+
+#cleaner:active {
+  transform: scale(0.95, 0.95);
+}
+
+.dictionary {
+  width: 500px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;  
+}
+
+.line {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.origin,
+.translit {
+  width: calc(50% - 1px);
+  height: calc(100% - 1px);
+  border-bottom: 1px solid #111111;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.origin {
+  border-right: 1px solid #111111;   
+  background: #F0F0F0;
+}
+
+.translit {
+  border-left: 1px solid #111111;
+  background: #D8D8D8;
+}
+
+.line:first-child .origin {
+  border-radius: 8px 0 0 0;
+}
+
+.line:last-child .origin {
+  border-bottom: 1px solid transparent;
+  border-bottom-left-radius: 8px;
+}
+
+.line:first-child .translit {
+  border-radius: 0 8px 0 0;
+}
+
+.line:last-child .translit {
+  border-bottom: 1px solid transparent;
+  border-bottom-right-radius: 8px;
+}
+
+.order {
+  width: calc(9px + 28px);
+  margin-left: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: -0.05em;
+  text-align: left;
+  color: #111111;
+}
+
+.text {
+  margin: 0;
+  position: relative;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 40px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  color: #111111;  
+  flex-grow: 1;
+}
+
+.translit .text {
+  margin-left: 28px;
+}
+
+.translit img {
+  width: 18px;
+  height: 18px;
+  margin-right: 11px;  
+}
+
+.translit img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.translit img:active {
+  transform: scale(0.9, 0.9);
+}
+
+.prompt {
+  min-width: 120px;
+  max-width: 160px;
+  max-height: 300px;
+  margin: 0;
+  padding: 8px;  
+  position: absolute;
+  bottom: 54px;
+  left: -15px;  
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: #111111;
+  display: none;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+
+.text:hover .prompt {
+  display: block;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .logo {
+    margin-top: 20px;
+    margin-bottom: 76px;  
+    font-size: 36px;
+    line-height: 47px;
+    letter-spacing: -0.07em;
+  }
+
+  .input {  
+    width: 324px;
+  }
+
+  #input-text {
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+  }
+
+  .dictionary {
+    width: 328px;  
+    margin-top: 50px;
+    margin-bottom: 40px;  
+  }
+
+  .order {
+    width: calc(9px + 16px);
+  }
+
+  .translit .text {
+    margin-left: 16px;
+  }
+
+  .translit img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+
+  .text:hover .prompt {
+    display: none;
+  }
+
+}
